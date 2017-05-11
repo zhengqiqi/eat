@@ -1,0 +1,8 @@
+<!--mine.wxml-->
+<view>
+  <view>
+    <view class="calendar">
+    </view>
+    
+  </view>
+</view>
