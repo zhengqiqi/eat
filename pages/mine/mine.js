@@ -4,12 +4,40 @@ Page({
   data: {
     userInfo: {},
 
-    array: ['男', '女'],
-    index: 0,//等于用户输入的性别
+    usersex: ['男', '女'],
+    indexsex: 0,//等于用户输入的性别
+
+    userrate: ['1-3次/周','3-5次/周','6-7次/周','专业运动'],
+    indexrate: 0,//等于用户输入的运动频率
+
+    usergoal: ['减脂','塑身','增肌'],
+    indexgoal: 0,//等于用户输入的用餐目的
+
+    showDialog: false,
+
+    valueage: 25,
+
   },
 
+  bindPickerChange1: function(e) {
+    console.log('发生 picker 事件，携带值为', e.detail.value)
+    this.setData({
+      indexsex: e.detail.value
+    });
+  },
 
+  toggleDialog() {
+    this.setData({
+      showDialog: !this.data.showDialog
+    });
+  },
 
+  sliderchange: function(e) {
+    console.log('发生 change 事件，携带值为', e.detail.value)
+    this.setData({
+      valueage: e.detail.value
+    });
+  },
 
   //事件处理函数
   bindViewTap: function() {

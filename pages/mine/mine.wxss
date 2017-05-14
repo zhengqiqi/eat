@@ -30,8 +30,14 @@
 .userinfo{
     width: 99%;
     height: 100%;
-    border: 2px;
     border: 1px solid #eeeeee;
+}
+
+.userbtn{
+    border: none;
+    background: #ffffff;
+    text-align: left;
+    padding-left: 0px;
 }
 
 .commodity_screen {
@@ -56,4 +62,30 @@
   z-index: 2000;
   background: #fff;
   padding-top: 20rpx;
+}
+
+.zan-dialog1__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.zan-dialog1__container {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  background: white;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+  z-index: 11;
+}
+.zan-dialog1--show .zan-dialog1__container {
+  transform: translateY(0);
+}
+.zan-dialog1--show .zan-dialog1__mask {
+  display: block;
 }

@@ -1,8 +1,7 @@
 {
   "pages":[
-    "pages/plan/plan",
     "pages/mine/mine",
-    "pages/setAge/setAge",
+    "pages/plan/plan",
     "pages/index/index",
     "pages/logs/logs"
   ],

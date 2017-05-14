@@ -7,24 +7,51 @@
     </view>
     <view class="user">
         <view class="userinfoline">
+
             <view class="userinfoeach">
                 <view class="userinfo viewbackground">
-                    <navigator url="../../pages/setAge/setAge">
-                      <view>点击我跳转到下一个页面</view>
-                    </navigator>
+                  <view>
+                    <button class="userbtn" bindtap="toggleDialog">
+                      {{valueage}}
+                    </button>
+                  </view>
+                  <view>年龄</view>
                 </view>
             </view>
-            <view class="userinfoeach">
-                <view class="userinfo viewbackground">1</view>
+            <view class="zan-dialog1 {{ showDialog ? 'zan-dialog1--show' : '' }}">
+              <view class="zan-dialog1__mask" bindtap="toggleDialog" />
+              <view class="zan-dialog1__container">
+                <view style="padding-top: 30px; text-align: center;">您的年龄是：</view>
+                <view style="padding-top: 30px; text-align: center;">
+                  {{valueage}}
+                </view>
+                <view class="section section_gap" style="padding: 20px 0">
+                  <view class="body-view">
+                    <slider bindchange="sliderchange" min="10" max="60" value="{{valueage}}" show-value/>
+                  </view>
+                </view>
+              </view>
             </view>
+
+            <view class="userinfoeach">
+                <view class="userinfo viewbackground">
+                  <view>
+                    <button class="userbtn" bindtap="toggleDialog">
+                      {{valueage}}
+                    </button>
+                  </view>
+                  <view>身高</view>
+                </view>
+            </view>
+
             <view class="userinfoeach">
                 <view class="userinfo viewbackground">1</view>
             </view>
             <view class="userinfoeach">
                 <view class="userinfo viewbackground">
-                    <picker bindchange="bindPickerChange" value="{{indexsex}}" range="{{array}}">
+                    <picker bindchange="bindPickerChange1" value="{{indexsex}}" range="{{usersex}}">
                         <view>
-                          {{array[index]}}
+                          {{usersex[indexsex]}}
                         </view>
                         <view>性别</view>
                     </picker>
@@ -32,16 +59,23 @@
             </view>
             <view class="userinfoeach">
                 <view class="userinfo viewbackground">
-                    <picker bindchange="bindPickerChange" value="{{index}}" range="{{arrayrate}}">
+                    <picker bindchange="bindPickerChange2" value="{{indexrate}}" range="{{userrate}}">
                         <view>
-                          {{array[index]}}
+                          {{userrate[indexrate]}}
                         </view>
                         <view>运动频率</view>
                     </picker>
                 </view>
             </view>
             <view class="userinfoeach">
-                <view class="userinfo viewbackground">1</view>
+                <view class="userinfo viewbackground">
+                    <picker bindchange="bindPickerChange3" value="{{indexgoal}}" range="{{usergoal}}">
+                        <view>
+                          {{usergoal[indexgoal]}}
+                        </view>
+                        <view>用餐目的</view>
+                    </picker>
+                </view>
             </view>
         </view>
     </view>
