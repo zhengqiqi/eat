@@ -23,11 +23,11 @@
               <view class="zan-dialog1__container">
                 <view style="padding-top: 30px; text-align: center;">您的年龄是：</view>
                 <view style="padding-top: 30px; text-align: center;">
-                  {{valueage}}
+                  {{age}}
                 </view>
                 <view class="section section_gap" style="padding: 20px 0">
                   <view class="body-view">
-                    <slider bindchange="sliderchange" min="10" max="60" value="{{valueage}}" show-value/>
+                    <slider bindchange="sliderchange" min="10" max="60" value="{{age}}" show-value/>
                   </view>
                 </view>
               </view>
@@ -37,7 +37,7 @@
                 <view class="userinfo viewbackground">
                   <view>
                     <button class="userbtn" bindtap="toggleDialog">
-                      {{valueage}}
+                      {{age}}
                     </button>
                   </view>
                   <view>身高</view>
@@ -49,9 +49,9 @@
             </view>
             <view class="userinfoeach">
                 <view class="userinfo viewbackground">
-                    <picker bindchange="bindPickerChange1" value="{{indexsex}}" range="{{usersex}}">
+                    <picker bindchange="onPickerChange" data-var-name="sex" value="{{sex}}" range="{{ALL_SEX}}">
                         <view>
-                          {{usersex[indexsex]}}
+                          {{ALL_SEX[sex]}}
                         </view>
                         <view>性别</view>
                     </picker>
@@ -59,9 +59,9 @@
             </view>
             <view class="userinfoeach">
                 <view class="userinfo viewbackground">
-                    <picker bindchange="bindPickerChange2" value="{{indexrate}}" range="{{userrate}}">
+                    <picker bindchange="onPickerChange" data-var-name="rate" value="{{rate}}" range="{{ALL_RATE}}">
                         <view>
-                          {{userrate[indexrate]}}
+                          {{ALL_RATE[rate]}}
                         </view>
                         <view>运动频率</view>
                     </picker>

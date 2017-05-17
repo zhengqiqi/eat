@@ -4,26 +4,23 @@ Page({
   data: {
     userInfo: {},
 
-    usersex: ['男', '女'],
-    indexsex: 0,//等于用户输入的性别
+    ALL_SEX: ['男', '女'],
+    sex: 0,//等于用户输入的性别
 
-    userrate: ['1-3次/周','3-5次/周','6-7次/周','专业运动'],
-    indexrate: 0,//等于用户输入的运动频率
+    ALL_RATE: ['1-3次/周','3-5次/周','6-7次/周','专业运动'],
+    rate: 0,//等于用户输入的运动频率
 
-    usergoal: ['减脂','塑身','增肌'],
-    indexgoal: 0,//等于用户输入的用餐目的
-
+    ALL_GOAL: ['减脂','塑身','增肌'],
+    goal: 0,//等于用户输入的用餐目的
     showDialog: false,
-
-    valueage: 25,
-
+    age: 25
   },
 
-  bindPickerChange1: function(e) {
-    console.log('发生 picker 事件，携带值为', e.detail.value)
-    this.setData({
-      indexsex: e.detail.value
-    });
+  onPickerChange(e) {
+    var varName = e.target.dataset.varName;
+    var newDateSet = {};
+    newDateSet[varName] = e.detail.value;
+    this.setData(newDateSet);
   },
 
   toggleDialog() {
@@ -35,18 +32,11 @@ Page({
   sliderchange: function(e) {
     console.log('发生 change 事件，携带值为', e.detail.value)
     this.setData({
-      valueage: e.detail.value
+      age: e.detail.value
     });
   },
 
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onLoad: function () {
-    console.log('onLoad')
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
