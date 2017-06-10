@@ -1,0 +1,68 @@
+<!--recipe.wxml-->
+<view>
+  <view class="whiteBackground">
+    <view class="padding">
+      <view class="pngAndBasic">
+        <image class="coverPng" mode="aspectFill" src="{{coverPng}}"></image>
+        <view class="calorieAndBasic">
+          <view class="calorieAndJoule">热量:{{calorie}}千卡/{{joule}}千焦</view>
+          <view class="basicLine">
+            <view class="basicTitle">碳水:</view>
+            <view class="basicPregress">
+              <progress percent="{{carbohydrate}}" show-info active	/>
+            </view>
+          </view>
+          <view class="basicLine">
+            <view class="basicTitle">蛋白质:</view>
+            <view class="basicPregress">
+              <progress percent="{{protein}}" show-info active	/>
+            </view>
+          </view>
+          <view class="basicLine">
+            <view class="basicTitle">脂肪:</view>
+            <view class="basicPregress">
+              <progress percent="{{fat}}" show-info active	/>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="intro">{{intro}}</view>
+    </view>
+  </view>
+  <view class="whiteBackground">
+    <view class="padding">
+      <view class="title">用料</view>
+      <view class="table">
+        <block wx:for="{{listData}}" wx:key="{{code}}">
+          <view class="tr">
+            <view class="td ingre">{{item.ingre}}</view>
+            <view class="td weight">{{item.weight}}</view>
+            <view class="td calorie">{{item.calorie}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="whiteBackground">
+    <view class="padding">
+      <view class="title">步骤</view>
+      <block wx:for="{{step}}" wx:key="{{code}}">
+        <view class="stepView">
+          <image class="stepPng" mode="aspectFill" src="{{item.png}}"></image>
+          <view class="stepInfo">
+            <view class="stepNum">{{item.num}}.</view>
+            <view class="stepCon">{{item.content}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="whiteBackground">
+    <view class="padding">
+      <view class="title">小贴士</view>
+      <view class="tip">
+        <view class="tipCon">{{tip}}</view>
+      </view>
+    </view>
+  </view>
+</view>

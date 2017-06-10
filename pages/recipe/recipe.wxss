@@ -1,0 +1,141 @@
+/**plan.wxss**/
+.whiteBackground{
+  background: #ffffff;
+  width: 100%;
+  margin-top: 8px;
+  float: left;
+}
+
+.padding{
+  margin-left: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+.coverPng{
+  width: 150px;
+  height: 100px;
+  float: left;
+}
+
+.calorieAndBasic{
+  height: 100px;
+  margin-left: 8px;
+  float: left;
+}
+
+.calorieAndJoule{
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.basicLine{
+  line-height: 25px;
+}
+
+.basicTitle{
+  color: #8c878c;
+  font-size: 14px;
+  width: 30%;
+  float: left;
+}
+
+.basicPregress{
+  width: 70%;
+  float: left;
+}
+
+.intro{
+  float:left;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.title{
+  border-bottom: 1px solid #bbbbbb;
+  font-weight: bold;
+}
+
+.table {
+  border: 0px solid darkgray;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+}
+
+.td {
+  justify-content: center;
+  font-size: 14px;
+}
+
+.ingre{
+  width: 25%;
+  text-align: left;
+}
+
+.weight{
+  width: 30%;
+  text-align: left;
+  color: #8c878c;
+}
+
+.calorie{
+  width: 30%;
+  text-align: right;
+  color: #8c878c;
+}
+
+.stepView{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bbbbbb;
+  margin-top: 5px;
+}
+
+.stepPng{
+  width: 260px;
+  height: 150px;
+}
+
+.stepInfo{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 300px;
+  display: block;
+  font-size: 13px;
+}
+
+.stepNum{
+  width: 20px;
+  text-align: right;
+  float: left;
+}
+
+.stepCon{
+  width: 280px;
+  text-align: left;
+  float: left;
+}
+
+.tip{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px; 
+}
+
+.tipCon{
+  width: 300px;
+  font-size: 13px;
+}

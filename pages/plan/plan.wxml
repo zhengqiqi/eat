@@ -3,6 +3,43 @@
   <view>
     <view class="calendar">
     </view>
-    
+    <view class="planList">
+      <view class="planListeach">
+        <view class="planListhead" bindtap="onChangeShowState">
+          <image class="headpng" mode="aspectFill" src="{{headPng}}"></image>
+          <view class="headname">{{headName}}</view>
+          <view class="headcal">{{headCal}}千卡</view>
+        </view>
+        <view class="planListContent view_hide{{showView?'view_show':''}}" bindtap="onClick">
+          <view class="listeach">
+            <image class="listpng" mode="aspectFill" src="{{listPng}}"></image>
+            <view class="listfont">
+              <view class="listfontname">{{listFontName}}</view>
+              <view class="listfontstuff">{{listFontStuff}}</view>
+            </view>
+            <view class="listcal">{{listCal}}千卡</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="planListeach">
+        <view class="planListhead" bindtap="onChangeShowState">
+          <image class="headpng" mode="aspectFill" src="{{headPng}}"></image>
+          <view class="headname">{{headName}}</view>
+          <view class="headcal">{{headCal}}千卡</view>
+        </view>
+        <view class="planListContent view_hide{{showView?'view_show':''}}">
+          <view class="listeach">
+            <image class="listpng" mode="aspectFill" src="{{listPng}}"></image>
+            <view class="listfont">
+              <view class="listfontname">{{listFontName}}</view>
+              <view class="listfontstuff">{{listFontStuff}}</view>
+            </view>
+            <view class="listcal">{{listCal}}千卡</view>
+          </view>
+        </view>
+      </view>
+
+    </view>
   </view>
 </view>

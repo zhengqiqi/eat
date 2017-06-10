@@ -1,4 +1,16 @@
-/**mine.wxss**/
+/**welcome.wxss**/
+page{
+  background: #ffffff;
+}
+
+.my-class {
+  padding: 10px;
+}
+
+.my-class .zan-steps__step--done {
+  color: #f44;
+}
+
 .user {
     margin-top: 8px;
 }

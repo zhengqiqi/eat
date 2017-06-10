@@ -1,15 +1,20 @@
-//mine.js
+//plan.js
 var app = getApp()
 Page({
   data: {
     userInfo: {},
 
-    array: ['男', '女'],
-    index: 0,//等于用户输入的性别
+    headPng: '../../image/breakfast.png',
+    headName: '早餐',
+    headCal: '400',
+
+    listPng: '../../image/user.png',
+    listFontName: '蒸龙利鱼',
+    listFontStuff: '龙利鱼',
+    listCal: '400',
+
+    showView: true,
   },
-
-
-
 
   //事件处理函数
   bindViewTap: function() {
@@ -27,46 +32,20 @@ Page({
         userInfo:userInfo
       })
     })
+
+    showView: (options.showView == "true" ? true : false)
   },
 
-  showModal: function () {
-    // 显示遮罩层
-    var animation = wx.createAnimation({
-      duration: 200,
-      timingFunction: "linear",
-      delay: 0
+  onChangeShowState: function() {
+    var that = this;
+    that.setData({
+      showView: (!that.data.showView)
     })
-    this.animation = animation
-    animation.translateY(300).step()
-    this.setData({
-      animationData: animation.export(),
-      showModalStatus: true
-    })
-    setTimeout(function () {
-      animation.translateY(0).step()
-      this.setData({
-        animationData: animation.export()
-      })
-    }.bind(this), 200)
   },
-  hideModal: function () {
-    // 隐藏遮罩层
-    var animation = wx.createAnimation({
-      duration: 200,
-      timingFunction: "linear",
-      delay: 0
+
+  onClick: function(){
+    wx.navigateTo({
+      url: '../recipe/recipe'
     })
-    this.animation = animation
-    animation.translateY(300).step()
-    this.setData({
-      animationData: animation.export(),
-    })
-    setTimeout(function () {
-      animation.translateY(0).step()
-      this.setData({
-        animationData: animation.export(),
-        showModalStatus: false
-      })
-    }.bind(this), 200)
-  }
+  },
 })
