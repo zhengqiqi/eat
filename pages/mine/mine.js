@@ -9,7 +9,6 @@ Page({
 
     ALL_RATE: ['1-3次/周','3-5次/周','6-7次/周','专业运动'],
     rate: 0,//等于用户输入的运动频率
-<<<<<<< HEAD
 
     ALL_GOAL: ['减脂','塑身','增肌'],
     goal: 0,//等于用户输入的用餐目的
@@ -22,18 +21,14 @@ Page({
     high: 160,
     weight: 50,
 
-=======
-
     ALL_GOAL: ['减脂','塑身','增肌'],
     goal: 0,//等于用户输入的用餐目的
     showDialog: false,
     age: 25
->>>>>>> origin/master
   },
 
   onPickerChange(e) {
     var varName = e.target.dataset.varName;
-<<<<<<< HEAD
     var newDataSet = {};
     newDataSet[varName] = e.detail.value;
     this.setData(newDataSet);
@@ -44,11 +39,9 @@ Page({
     this.setData({
       showAgeDialog: !this.data.showAgeDialog
     });
-=======
     var newDateSet = {};
     newDateSet[varName] = e.detail.value;
     this.setData(newDateSet);
->>>>>>> origin/master
   },
   toggleHighDialog() {
     this.setData({
@@ -74,11 +67,7 @@ Page({
       age: e.detail.value
     });
   },*/
-
-<<<<<<< HEAD
   //事件处理函数
-=======
->>>>>>> origin/master
   onLoad: function () {
     var that = this
     //调用应用实例的方法获取全局数据
