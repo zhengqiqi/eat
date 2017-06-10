@@ -27,7 +27,11 @@
                 </view>
                 <view class="section section_gap" style="padding: 20px 0">
                   <view class="body-view">
+<<<<<<< HEAD
                     <slider bindchange="sliderChange" min="10" max="60" value="{{age}}" show-value/>
+=======
+                    <slider bindchange="sliderchange" min="10" max="60" value="{{age}}" show-value/>
+>>>>>>> origin/master
                   </view>
                 </view>
               </view>
@@ -36,8 +40,13 @@
             <view class="userinfoeach">
                 <view class="userinfo viewbackground">
                   <view>
+<<<<<<< HEAD
                     <button class="userbtn" bindtap="toggleHighDialog">
                       {{high}}
+=======
+                    <button class="userbtn" bindtap="toggleDialog">
+                      {{age}}
+>>>>>>> origin/master
                     </button>
                   </view>
                   <view>身高</view>
