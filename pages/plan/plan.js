@@ -33,7 +33,7 @@ Page({
       })
     })
 
-    showView: (options.showView == "true" ? true : false)
+    showView: true
   },
 
   onChangeShowState: function() {
